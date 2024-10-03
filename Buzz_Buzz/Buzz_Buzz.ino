@@ -192,7 +192,7 @@ void playShaveAndHaircut() {
 
 
 // Pin Assignments
-const int relayPin = 3;       // Relay 3 controlling Buzzer
+/*const int relayPin = 3;       // Relay 3 controlling Buzzer
 const int triggerPin = 9;     // Pin D9 for triggering
 
 void setup() {
@@ -218,9 +218,9 @@ void loop() {
 void playShaveAndHaircut() {
   // Play the "Shave and a Haircut" melody with the buzzer
 
-  digitalWrite(relayPin, LOW);  // Buzzer ON (assuming active LOW relay)
+  digitalWrite(relayPin, HIGH);  // Buzzer ON (assuming active LOW relay)
   delay(100);                   // Short buzz (Shave)
-  digitalWrite(relayPin, HIGH); // Buzzer OFF
+  digitalWrite(relayPin, LOW); // Buzzer OFF
   delay(100);
 
   digitalWrite(relayPin, LOW);  // Short buzz (and)
@@ -228,23 +228,37 @@ void playShaveAndHaircut() {
   digitalWrite(relayPin, HIGH); // Buzzer OFF
   delay(200);
 
-  digitalWrite(relayPin, LOW);  // Short buzz (a)
+  digitalWrite(relayPin, HIGH);  // Short buzz (a)
   delay(100);
-  digitalWrite(relayPin, HIGH); // Buzzer OFF
+  digitalWrite(relayPin, LOW); // Buzzer OFF
   delay(100);
 
-  digitalWrite(relayPin, LOW);  // Short buzz (Haircut)
+  digitalWrite(relayPin, HIGH);  // Short buzz (Haircut)
   delay(300);
-  digitalWrite(relayPin, HIGH); // Buzzer OFF
+  digitalWrite(relayPin, LOW); // Buzzer OFF
   delay(200);
 
-  digitalWrite(relayPin, LOW);  // Long buzz (Buzz)
+  digitalWrite(relayPin, HIGH);  // Long buzz (Buzz)
   delay(400);
-  digitalWrite(relayPin, HIGH); // Buzzer OFF
+  digitalWrite(relayPin, LOW); // Buzzer OFF
   delay(100);
 
-  digitalWrite(relayPin, LOW);  // Long buzz (Buzz)
+  digitalWrite(relayPin, HIGH);  // Long buzz (Buzz)
   delay(400);
-  digitalWrite(relayPin, HIGH); // Buzzer OFF
-  delay(500);  // Pause before repeating
+  digitalWrite(relayPin, LOW); // Buzzer OFF
+  delay(500);  // Pause before repeating */
+
+  // Pin Assignment
+const int buzzerPin = 3;  // Buzzer connected to Pin 3
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);  // Set buzzer pin as output
+}
+
+void loop() {
+  digitalWrite(buzzerPin, HIGH);  // Turn buzzer ON
+  delay(1000);                    // Wait for 1 second (1000 ms)
+
+  digitalWrite(buzzerPin, LOW);   // Turn buzzer OFF
+  delay(1000);                    // Wait for 1 second (1000 ms)
 }
